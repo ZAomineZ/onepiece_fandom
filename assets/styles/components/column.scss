@@ -1,0 +1,21 @@
+.row {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.content {
+  margin-top: 60px;
+}
+
+.grid__33, .tablet__grid_50 {
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  .grid__33 {
+    float: left;
+    width: 33.33333%;
+  }
+}

@@ -1,0 +1,42 @@
+.featured__image {
+  border-radius: 15px !important;
+}
+
+.thumb {
+  position: relative;
+  z-index: 1;
+  min-height: 80px;
+
+  .fullimage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100% !important;
+    z-index: 1;
+  }
+}
+
+a.hover__effect {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background: #000000;
+
+  span.cover {
+    display: block;
+    width: 101%;
+    height: auto;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+    transition: all 600ms ease;
+  }
+}
+
+.cover {
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: cover !important;
+}

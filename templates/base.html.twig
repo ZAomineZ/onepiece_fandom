@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link rel="icon"
+          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
+
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock %}
+</head>
+<body>
+<div class="wrapper">
+    <header id="header" class="minimalist" style="height: 101px">
+        <div class="menu__wrapper">
+            <div class="grid__container">
+                <div class="logo">
+                    <a href="#">
+                        <img src="http://estudiopatagon.com/themes/wordpress/breek/wp-content/uploads/2019/06/Logo@2x.png"
+                             alt="Logo" width="158">
+                    </a>
+                </div>
+                <nav class="main__nav gradient__effect">
+                    <ul class="menu">
+                        <li class="search__menu_item">
+                            <a href="#" class="lightbox">
+                                <i class="ri-search-line"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </header>
+    <main id="home" class="main">
+        {% block body %}{% endblock %}
+    </main>
+</div>
+</body>
+</html>
