@@ -7,6 +7,7 @@ namespace App\Concern\Scrapp;
 use App\Concern\Api\Qwant;
 use App\Exceptions\QwantNotAccess;
 use Cocur\Slugify\Slugify;
+use Exception;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use InvalidArgumentException;
@@ -32,7 +33,7 @@ final class OnePieceFandomSearch
     /**
      * @throws GuzzleException
      * @throws QwantNotAccess
-     * @throws \Exception
+     * @throws Exception
      */
     public function searchResults(string $search): array
     {

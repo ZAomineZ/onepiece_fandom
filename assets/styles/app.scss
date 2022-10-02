@@ -116,6 +116,10 @@ input[type=email], input[type=password], input[type=tel], input[type=text], inpu
   transition: all 300ms ease;
 }
 
+b, strong {
+  font-weight: bold;
+}
+
 .clear {
   clear: both;
   display: block;

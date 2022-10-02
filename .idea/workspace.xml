@@ -2,31 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1537b258-32bf-4a71-91c9-16d9174f946e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/components/_button.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/components/_text.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/elements/_search.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/layout/_footer.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Concern/Api/Qwant.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Concern/Scrapp/OnePieceFandomSearch.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Concern/Scrapp/OnepieceFandom.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/PostController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exceptions/QwantNotAccess.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Helper/ConvertImage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pages/post/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/onepiece_fandom.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/onepiece_fandom.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Concern/Scrapp/OnePieceFandomWiki.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/components/column.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/components/column.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/elements/posts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/elements/posts.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/layout/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/layout/header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Concern/Scrapp/OnePieceFandomSearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Concern/Scrapp/OnePieceFandomSearch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/post/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/post/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +202,7 @@
       <workItem from="1664272127610" duration="145000" />
       <workItem from="1664304834930" duration="8205000" />
       <workItem from="1664656912244" duration="1058000" />
-      <workItem from="1664701914397" duration="15948000" />
+      <workItem from="1664701914397" duration="24338000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Init project">
       <created>1664272262947</created>
@@ -229,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664272262947</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: add search post on one piece">
+      <created>1664722445739</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1664722445739</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,6 +226,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: Init project" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Init project" />
+    <MESSAGE value="feat: add search post on one piece" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add search post on one piece" />
   </component>
 </project>
