@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\Concern\Scrapp\OnePieceFandomPopular;
 use App\Concern\Scrapp\OnePieceFandomSearch;
 use App\Exceptions\QwantNotAccess;
 use GuzzleHttp\Exception\GuzzleException;
@@ -15,7 +16,8 @@ use Symfony\Component\Routing\Annotation\Route;
 final class HomeController extends AbstractController
 {
     public function __construct(
-        private readonly OnePieceFandomSearch $onePieceFandomSearch
+        private readonly OnePieceFandomSearch $onePieceFandomSearch,
+        private readonly OnePieceFandomPopular $onePieceFandomPopular
     )
     {
     }
@@ -36,6 +38,8 @@ final class HomeController extends AbstractController
             $results = $this->onePieceFandomSearch->searchResults($search);
         }
 
-        return $this->render('pages/index.html.twig', compact('results'));
+        $popularResults = $this->onePieceFandomPopular->popularity();
+
+        return $this->render('pages/index.html.twig', compact('results', 'popularResults'));
     }
 }

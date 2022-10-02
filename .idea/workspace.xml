@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1537b258-32bf-4a71-91c9-16d9174f946e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Concern/Scrapp/OnePieceFandomPopular.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Concern/Scrapp/OnePieceFandomSearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Concern/Scrapp/OnePieceFandomSearch.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Concern/Scrapp/OnePieceFandomWiki.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Concern/Scrapp/OnePieceFandomWiki.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Concern/Scrapp/OnepieceFandom.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Concern/Scrapp/OnepieceFandom.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/pages/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/post/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/post/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +200,7 @@
       <workItem from="1664272127610" duration="145000" />
       <workItem from="1664304834930" duration="8205000" />
       <workItem from="1664656912244" duration="1058000" />
-      <workItem from="1664701914397" duration="26838000" />
+      <workItem from="1664701914397" duration="30023000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Init project">
       <created>1664272262947</created>
@@ -223,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664732454969</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: fix paragraph not found for show post">
+      <created>1664734829844</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664734829844</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,6 +240,7 @@
     <MESSAGE value="feat: Init project" />
     <MESSAGE value="feat: add search post on one piece" />
     <MESSAGE value="feat: add show post one piece" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add show post one piece" />
+    <MESSAGE value="feat: fix paragraph not found for show post" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: fix paragraph not found for show post" />
   </component>
 </project>

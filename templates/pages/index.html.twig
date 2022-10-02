@@ -54,26 +54,13 @@
                 <div>
                     <div class="default__sidebar">
                         <section class="widget ">
-                            <h4 class="title">Categories</h4>
+                            <h4 class="title">Pages popularies</h4>
                             <ul>
-                                <li class="cat__item">
-                                    <a href="#">One piece</a>
-                                </li>
-                                <li class="cat__item">
-                                    <a href="#">One piece</a>
-                                </li>
-                                <li class="cat__item">
-                                    <a href="#">One piece</a>
-                                </li>
-                                <li class="cat__item">
-                                    <a href="#">One piece</a>
-                                </li>
-                                <li class="cat__item">
-                                    <a href="#">One piece</a>
-                                </li>
-                                <li class="cat__item">
-                                    <a href="#">One piece</a>
-                                </li>
+                                {% for item in popularResults %}
+                                    <li class="cat__item">
+                                        <a href="{{ path('post.show', {slug: item['slug']}) }}">{{ item['title'] }}</a>
+                                    </li>
+                                {% endfor %}
                             </ul>
                         </section>
                     </div>
