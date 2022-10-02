@@ -3,28 +3,80 @@
 {% block title %}One piece{% endblock %}
 
 {% block body %}
-    <div class="grid__container aos__animate" data-aos="fade-up">
-        <div class="row">
-            <div class="content content__wrapper">
-                <div class="posts column__3" style="position: relative; height: 1747px">
-                    <article class="bgstyle grid__33 tablet__grid_50"
-                             style="position: absolute; left: 0; top: 0">
-                        <div class="post__wrapper">
-                            <div class="top">
-                                <div class="post__format_image post__format_wrapper">
-                                    <div class="featured__image">
-                                        <a href="#" class="thumb hover__effect">
+    <div class="grid__container">
+        <div class="content content__wrapper">
+            <div class="center left__content grid__70">
+                <div class="posts">
+                    {% for item in results %}
+                        <article>
+                            <div class="post__wrapper">
+                                <div class="top">
+                                    <div class="post__format_image post__format_wrapper">
+                                        <div class="featured__image">
+                                            <a href="#" class="thumb hover__effect">
                                             <span class="fullimage cover"
-                                                  style="background-image: url('http://estudiopatagon.com/themes/wordpress/breek/wp-content/uploads/2019/06/480016-PGKTGR-852-op.jpg')"></span>
-                                        </a>
-                                        <div class="tags absolute"></div>
+                                                  style="background-image: url('{{ item['image'] }}')"></span>
+                                            </a>
+                                            <div class="tags absolute">
+                                                <a href="#" class="tag__link">{{ item['title'] }}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <header>
+                                        <h1 class="title large gradient__effect">
+                                            <a href="#">{{ item['title'] }}</a>
+                                        </h1>
+                                    </header>
+                                    <div class="grid__container post__text grid__small">
+                                        <p>{{ item['description']  }}</p>
+                                        <div class="clear"></div>
+                                        <a href="#" class="button red">Continue reading</a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </article>
+                        </article>
+                    {% endfor %}
+                </div>
+                <div class="separator"></div>
+                <div class="clear"></div>
+                <div class="pagination section">
+                    <div class="nav">
+                        <span class="page__number"> Page 1 of 2 </span>
+                        <a href="#">Next</a>
+                    </div>
                 </div>
             </div>
+            <aside id="sidebar" class="grid__30">
+                <div>
+                    <div class="default__sidebar">
+                        <section class="widget ">
+                            <h4 class="title">Categories</h4>
+                            <ul>
+                                <li class="cat__item">
+                                    <a href="#">One piece</a>
+                                </li>
+                                <li class="cat__item">
+                                    <a href="#">One piece</a>
+                                </li>
+                                <li class="cat__item">
+                                    <a href="#">One piece</a>
+                                </li>
+                                <li class="cat__item">
+                                    <a href="#">One piece</a>
+                                </li>
+                                <li class="cat__item">
+                                    <a href="#">One piece</a>
+                                </li>
+                                <li class="cat__item">
+                                    <a href="#">One piece</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </aside>
         </div>
     </div>
 {% endblock %}

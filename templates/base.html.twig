@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="">
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}Welcome!{% endblock %}</title>
@@ -17,6 +17,24 @@
     {% endblock %}
 </head>
 <body>
+{#<div class="search_bg search_zoom"></div>
+<div class="search_wrap">
+    <div class="search_container">
+        <div class="search_content">
+            <div class="grid__container grid__parent grid__small">
+                <h4 class="title small text__center fw__normal white">
+                    Press <span>ESC</span> to close
+                </h4>
+                <div class="search_wrapper section">
+                    <form action="#" method="GET" class="search_form">
+                        <input type="text" name="q" value="" class="search_field" placeholder="Your search...">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <span title="Close (Esc)" class="search_close">×</span>
+</div>#}
 <div class="wrapper">
     <header id="header" class="minimalist" style="height: 101px">
         <div class="menu__wrapper">
@@ -37,6 +55,7 @@
                     </ul>
                 </nav>
                 <div class="clear"></div>
+                <div class="border"></div>
             </div>
             <div class="clear"></div>
         </div>
@@ -45,6 +64,8 @@
     <main id="home" class="main">
         {% block body %}{% endblock %}
     </main>
+    <footer id="footer"></footer>
+    <div class="clear"></div>
 </div>
 </body>
 </html>

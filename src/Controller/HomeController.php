@@ -1,16 +1,41 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Controller;
 
+use App\Concern\Scrapp\OnePieceFandomSearch;
+use App\Exceptions\QwantNotAccess;
+use GuzzleHttp\Exception\GuzzleException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class HomeController extends AbstractController
+final class HomeController extends AbstractController
 {
-    #[Route('/', name: 'home')]
-    public function index(): Response
+    public function __construct(
+        private readonly OnePieceFandomSearch $onePieceFandomSearch
+    )
     {
-        return $this->render('pages/index.html.twig');
+    }
+
+    /**
+     * @param Request $request
+     * @return Response
+     * @throws GuzzleException
+     * @throws QwantNotAccess
+     */
+    #[Route('/', name: 'home')]
+    public function index(Request $request): Response
+    {
+        $results = [];
+
+        if ($request->query->has('search')) {
+            $search = $request->query->get('search');
+            $results = $this->onePieceFandomSearch->searchResults($search);
+        }
+
+        return $this->render('pages/index.html.twig', compact('results'));
     }
 }

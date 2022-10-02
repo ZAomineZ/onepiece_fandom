@@ -4,18 +4,50 @@
 }
 
 .content {
-  margin-top: 60px;
+  margin-top: 120px;
 }
 
-.grid__33, .tablet__grid_50 {
+.grid__30,
+.grid__33,
+.grid__70,
+.tablet__grid_50 {
   box-sizing: border-box;
   padding-left: 20px;
   padding-right: 20px;
+
+  &:before {
+    content: ".";
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    font-size: 0;
+    line-height: 0;
+    width: 0;
+    height: 0;
+  }
+}
+
+div.left__content {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-right: 0;
+  margin-left: 0;
+  padding-right: 40px;
 }
 
 @media screen and (min-width: 1024px) {
+  .grid__30 {
+    float: left;
+    width: 30%;
+  }
+
   .grid__33 {
     float: left;
     width: 33.33333%;
+  }
+
+  .grid__70 {
+    float: left;
+    width: 70%;
   }
 }

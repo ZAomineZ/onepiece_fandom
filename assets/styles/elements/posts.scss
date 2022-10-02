@@ -1,10 +1,9 @@
 div.posts {
   padding: 0;
+  display: block;
 
   article {
-    float: right;
-    padding-top: 10px;
-    padding-bottom: 40px;
+    padding: 0 0 40px;
   }
 
   article.bgstyle {
@@ -42,5 +41,127 @@ div.posts {
     height: 375px;
     max-height: inherit;
     border-radius: 15px;
+  }
+
+  article div.tags.absolute {
+    text-align: left;
+    top: 25px;
+    left: 20px;
+  }
+
+  article div.tags a.tag__link {
+    background-color: var(--color-tag) !important;
+  }
+
+  article .title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 0.6px;
+    padding-top: 15px;
+    margin-bottom: 15px;
+    line-height: 1.25;
+  }
+
+  article .title.large {
+    font-size: 34px;
+  }
+
+  article div.meta {
+    padding-top: 5px;
+    margin: 0 0 10px;
+  }
+
+  article div.meta .meta__info {
+    margin-right: 20px;
+    font-size: 14px;
+  }
+
+  article .post__text {
+    line-height: 1.8;
+    font-size: 16px;
+    padding-bottom: 40px;
+  }
+
+  article .post__text .button {
+    margin-top: 25px;
+  }
+}
+
+.main__post {
+  position: relative;
+}
+
+div.left__content .main__post {
+
+}
+
+div.tags {
+  display: block;
+
+  &.absolute {
+    position: absolute;
+    right: 0;
+    top: -15px;
+    width: 100%;
+    z-index: 10;
+    text-align: center;
+  }
+
+  a, span {
+    font-size: 15px;
+    color: #FFFFFF;
+    display: inline-block;
+    padding: 4px 25px;
+    vertical-align: top;
+    border-radius: 25px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+}
+
+div.pagination {
+  text-align: center;
+  padding-bottom: 0;
+
+  .nav {
+    display: inline-block;
+  }
+
+  .nav span {
+    display: inline-block;
+    margin: 0 10px;
+    height: 40px;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 25px;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 40px;
+    padding: 0 15px;
+    text-shadow: 0 0 1px rgb(0 0 0 / 15%);
+  }
+
+  .nav a {
+    display: inline-block;
+    background-color: var(--color-red-light);
+    vertical-align: top;
+    color: #fff;
+    font-size: 15px;
+    padding: 0 20px;
+    height: 36px;
+    line-height: 36px;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    -webkit-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
   }
 }

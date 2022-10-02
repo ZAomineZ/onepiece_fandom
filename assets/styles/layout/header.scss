@@ -23,6 +23,15 @@
   &:after {
     clear: both;
   }
+
+  &.grid__small {
+    max-width: 780px;
+  }
+}
+
+.grid__parent {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 #header .logo {
@@ -75,6 +84,57 @@
     background: none;
     font-size: 20px;
     top: 3px;
+  }
+}
+
+#header div.border {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+  margin-top: 40px;
+}
+
+#sidebar {
+  border: 0;
+  position: relative;
+  z-index: 2;
+  float: right;
+  padding: 0;
+
+  .widget {
+    color: #666666;
+    position: relative;
+    -webkit-box-shadow: 0 0 6px 0 rgb(0 0 0 / 15%);
+    box-shadow: 0 0 6px 0 rgb(0 0 0 / 15%);
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+  }
+
+  .widget ul > li {
+    display: block;
+    position: relative;
+    z-index: 1;
+    clear: both;
+    text-align: right;
+    background: none;
+    line-height: 30px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    padding-left: 0;
+    border-bottom: 1px solid #F4F4F4;
+    font-size: 16px;
+  }
+
+  .widget ul > li a {
+    font-size: 16px;
+    float: left;
+  }
+
+  .widget ul > li:after {
+    content: '';
+    display: block;
+    width: 100%;
+    clear: both;
   }
 }
 

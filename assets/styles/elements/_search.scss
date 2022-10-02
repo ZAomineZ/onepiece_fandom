@@ -1,0 +1,135 @@
+.search_active {
+  margin-right: 15px;
+  overflow: hidden;
+}
+
+.search_bg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1050;
+  overflow: hidden;
+  position: fixed;
+  background: #0b0b0b;
+  opacity: 0.8;
+  -webkit-opacity: 0.8;
+  -moz-opacity: 0.8;
+}
+
+.search_zoom {
+  -webkit-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+
+.search_bg.search_zoom {
+  -webkit-opacity: 0.8;
+  -moz-opacity: 0.8;
+  opacity: 0.8;
+}
+
+.search_wrap {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1055;
+  position: fixed;
+  overflow: hidden auto;
+  outline: none;
+}
+
+.search_container {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding: 0 8px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+}
+
+.search_close {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.search_close {
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-decoration: none;
+  text-align: center;
+  opacity: 0.65;
+  cursor: pointer;
+  padding: 0 0 18px 10px;
+  color: white;
+  font-style: normal;
+  font-size: 40px;
+}
+
+.search_content {
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 auto;
+  text-align: left;
+  z-index: 1055;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+
+  h4 {
+    margin-top: 10px;
+  }
+
+  h4 span {
+    font-weight: bold;
+  }
+}
+
+.search_wrapper.section {
+  padding: 0 40px;
+}
+
+form.search_form {
+  position: relative;
+  z-index: 1;
+  max-width: none !important;
+
+  input {
+    margin: 0;
+  }
+
+  input.search_field {
+    background: var(--color-blue-light);
+    border: 0;
+    color: #FFFFFF;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    padding-right: 50px;
+  }
+}
