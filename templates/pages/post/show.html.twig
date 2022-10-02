@@ -37,51 +37,79 @@
                             <section class="widget ">
                                 <h4 class="title">Informations</h4>
                                 <ul>
-                                    <li class="cat__item">
-                                        <a href="#">Nom Japonais : {{ informations['Nom Japonais'] }}</a>
-                                    </li>
-                                    <li class="cat__item">
-                                        <a href="#">Nom Français : {{ informations['Nom Français'] }}</a>
-                                    </li>
+                                    {% if (informations['Nom Japonais'] is defined) %}
+                                        <li class="cat__item">
+                                            <a href="#">Nom Japonais : {{ informations['Nom Japonais'] }}</a>
+                                        </li>
+                                    {% endif %}
+                                    {% if (informations['Nom Français'] is defined) %}
+                                        <li class="cat__item">
+                                            <a href="#">Nom Français : {{ informations['Nom Français'] }}</a>
+                                        </li>
+                                    {% endif %}
+                                    {% if (informations['Nom Français'] is defined) %}
                                     <li class="cat__item">
                                         <a href="#">Nom Romanisé: {{ informations['Nom Romanisé'] }}</a>
                                     </li>
+                                    {% endif %}
                                     <li class="cat__item">
                                         <a href="#">Première Apparition:</a>
                                     </li>
-                                    <li class="cat__item">
-                                        <a href="#">Affiliations: {{ informations['Affiliations'] }}</a>
-                                    </li>
-                                    <li class="cat__item">
-                                        <a href="#">Occupations : {{ informations['Occupations'] }}</a>
-                                    </li>
-                                    <li class="cat__item">
-                                        <a href="#">Alias : {{ informations['Épithète'] ?? informations['Alias']}}</a>
-                                    </li>
-                                    <li class="cat__item">
-                                        <a href="#">Prime : {{ informations['Épithète'] }}</a>
-                                    </li>
-                                    <li class="cat__item">
-                                        <a href="#">Statut : {{ informations['Statut'] }}</a>
-                                    </li>
-                                    <li class="cat__item">
-                                        <a href="#">Anniversaire : {{ informations['Anniversaire'] }}</a>
-                                    </li>
-                                    <li class="cat__item">
-                                        <a href="#">Âge : {{ informations['Âge'] }}</a>
-                                    </li>
-                                    <li class="cat__item">
-                                        <a href="#">Taille : {{ informations['Taille'] }}</a>
-                                    </li>
-                                    <li class="cat__item">
-                                        <a href="#">Groupe Sanguin : {{ informations['Groupe Sanguin'] }}</a>
-                                    </li>
-                                    <li class="cat__item">
-                                        <a href="#">Voix Japonaise : {{ informations['Voix Japonaise'] }}</a>
-                                    </li>
-                                    <li class="cat__item">
-                                        <a href="#">Voix Française : {{ informations['Voix Française'] }}</a>
-                                    </li>
+                                    {% if (informations['Affiliations'] is defined) %}
+                                        <li class="cat__item">
+                                            <a href="#">Affiliations: {{ informations['Affiliations'] }}</a>
+                                        </li>
+                                    {% endif %}
+                                    {% if (informations['Occupations'] is defined) %}
+                                        <li class="cat__item">
+                                            <a href="#">Occupations : {{ informations['Occupations'] }}</a>
+                                        </li>
+                                    {% endif %}
+                                    {% if ((informations['Épithète'] is defined) or (informations['Alias'] is defined)) %}
+                                        <li class="cat__item">
+                                            <a href="#">Alias : {{ informations['Épithète'] ?? informations['Alias']}}</a>
+                                        </li>
+                                    {% endif %}
+                                    {% if (informations['Prime'] is defined) %}
+                                        <li class="cat__item">
+                                            <a href="#">Prime : {{ informations['Prime'] }}</a>
+                                        </li>
+                                    {% endif %}
+                                    {% if (informations['Statut'] is defined) %}
+                                        <li class="cat__item">
+                                            <a href="#">Statut : {{ informations['Statut'] }}</a>
+                                        </li>
+                                    {% endif %}
+                                    {% if (informations['Anniversaire'] is defined) %}
+                                        <li class="cat__item">
+                                            <a href="#">Anniversaire : {{ informations['Anniversaire'] }}</a>
+                                        </li>
+                                    {% endif %}
+                                    {% if (informations['Âge'] is defined) %}
+                                        <li class="cat__item">
+                                            <a href="#">Âge : {{ informations['Âge'] }}</a>
+                                        </li>
+                                    {% endif %}
+                                    {% if (informations['Taille'] is defined) %}
+                                        <li class="cat__item">
+                                            <a href="#">Taille : {{ informations['Taille'] }}</a>
+                                        </li>
+                                    {% endif %}
+                                    {% if (informations['Taille'] is defined) %}
+                                        <li class="cat__item">
+                                            <a href="#">Groupe Sanguin : {{ informations['Taille'] }}</a>
+                                        </li>
+                                    {% endif %}
+                                    {% if (informations['Voix Japonaise'] is defined) %}
+                                        <li class="cat__item">
+                                            <a href="#">Voix Japonaise : {{ informations['Voix Japonaise'] }}</a>
+                                        </li>
+                                    {% endif %}
+                                    {% if (informations['Voix Japonaise'] is defined) %}
+                                        <li class="cat__item">
+                                            <a href="#">Voix Française : {{ informations['Voix Japonaise'] }}</a>
+                                        </li>
+                                    {% endif %}
                                 </ul>
                             </section>
                         </div>

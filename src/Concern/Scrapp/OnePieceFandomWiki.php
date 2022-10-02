@@ -36,6 +36,11 @@ final class OnePieceFandomWiki
         $paragraphs = $crawler->filter('.cquote ~ p')
             ->each(fn($node) => $node->text());
         $paragraphs = array_filter($paragraphs);
+        if (empty($paragraphs)) {
+            $paragraphs = $crawler->filter('p')
+                ->each(fn($node) => $node->text());
+            $paragraphs = array_filter($paragraphs);
+        }
         return array_slice($paragraphs, 0, 5);
     }
 

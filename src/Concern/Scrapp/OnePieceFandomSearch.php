@@ -46,9 +46,13 @@ final class OnePieceFandomSearch
             $link = $node->filter('.unified-search__result__header a')->attr('href');
             $description = $node->filter('.unified-search__result__content')->text();
 
+            $partsLink = explode('/', $link);
+            $slug = end($partsLink) ?? "";
+
             return [
                 'title' => $title,
                 'link' => $link,
+                'slug' => $slug,
                 'description' => $description
             ];
         });
