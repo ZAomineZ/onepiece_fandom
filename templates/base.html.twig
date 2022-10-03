@@ -17,8 +17,8 @@
     {% endblock %}
 </head>
 <body>
-{#<div class="search_bg search_zoom"></div>
-<div class="search_wrap">
+<div class="search_bg search_zoom d-none"></div>
+<div class="search_wrap d-none">
     <div class="search_container">
         <div class="search_content">
             <div class="grid__container grid__parent grid__small">
@@ -26,21 +26,21 @@
                     Press <span>ESC</span> to close
                 </h4>
                 <div class="search_wrapper section">
-                    <form action="#" method="GET" class="search_form">
-                        <input type="text" name="q" value="" class="search_field" placeholder="Your search...">
+                    <form action="{{ path('home') }}" method="GET" class="search_form">
+                        <input type="text" name="search" value="" class="search_field" placeholder="Your search...">
                     </form>
                 </div>
             </div>
         </div>
     </div>
     <span title="Close (Esc)" class="search_close">×</span>
-</div>#}
+</div>
 <div class="wrapper">
     <header id="header" class="minimalist" style="height: 101px">
         <div class="menu__wrapper">
             <div class="grid__container">
                 <div class="logo">
-                    <a href="#">
+                    <a href="{{ path('home') }}">
                         <img src="http://estudiopatagon.com/themes/wordpress/breek/wp-content/uploads/2019/06/Logo@2x.png"
                              alt="Logo" width="158">
                     </a>
@@ -48,7 +48,7 @@
                 <nav class="main__nav gradient__effect">
                     <ul class="menu">
                         <li class="search__menu_item">
-                            <a href="#" class="lightbox">
+                            <a href="#" class="lightbox" id="search_button">
                                 <i class="ri-search-line"></i>
                             </a>
                         </li>
@@ -67,5 +67,28 @@
     <footer id="footer"></footer>
     <div class="clear"></div>
 </div>
+<script>
+    const searchButton = document.querySelector('#search_button')
+    const searchBG = document.querySelector('.search_bg')
+    const searchWrap = document.querySelector('.search_wrap')
+    const searchClose = document.querySelector('.search_close')
+    const html = document.querySelector('html')
+
+    searchButton.addEventListener('click', e => {
+        e.preventDefault()
+
+        searchBG.classList.remove('d-none')
+        searchWrap.classList.remove('d-none')
+        html.classList.add('search_active')
+    })
+
+    searchClose.addEventListener('click', e => {
+        e.preventDefault()
+
+        searchBG.classList.add('d-none')
+        searchWrap.classList.add('d-none')
+        html.classList.remove('search_active')
+    })
+</script>
 </body>
 </html>

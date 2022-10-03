@@ -167,6 +167,10 @@ div.meta {
   padding-bottom: 50px;
 }
 
+.d-none {
+  display: none !important;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   body {
     font-size: 14px;
