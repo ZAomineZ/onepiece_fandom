@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\Concern\Scrapp\OnePieceFandomHome;
 use App\Concern\Scrapp\OnePieceFandomPopular;
 use App\Concern\Scrapp\OnePieceFandomSearch;
 use App\Exceptions\QwantNotAccess;
@@ -17,7 +18,8 @@ final class HomeController extends AbstractController
 {
     public function __construct(
         private readonly OnePieceFandomSearch $onePieceFandomSearch,
-        private readonly OnePieceFandomPopular $onePieceFandomPopular
+        private readonly OnePieceFandomPopular $onePieceFandomPopular,
+        private readonly OnePieceFandomHome $onePieceFandomHome
     )
     {
     }
@@ -31,7 +33,7 @@ final class HomeController extends AbstractController
     #[Route('/', name: 'home')]
     public function index(Request $request): Response
     {
-        $results = [];
+        $results = $this->onePieceFandomHome->results();
 
         if ($request->query->has('search')) {
             $search = $request->query->get('search');

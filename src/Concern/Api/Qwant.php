@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Concern\Api;
 
 use App\Exceptions\QwantNotAccess;
+use Exception;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 
@@ -48,7 +49,7 @@ final class Qwant
             }
 
             return $json['data']['result']['items'];
-        };
+        }
 
         if ($status === "error") {
             return [
@@ -58,5 +59,18 @@ final class Qwant
         }
 
         return [];
+    }
+
+    /**
+     * @throws QwantNotAccess
+     * @throws GuzzleException
+     * @throws Exception
+     */
+    public function image(string $search): string
+    {
+        $images = $this->images($search);
+        $randomInt = random_int(0, 50);
+
+        return $images[$randomInt]['media_fullsize'] ?? "";
     }
 }
