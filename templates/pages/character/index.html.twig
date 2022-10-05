@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="grid__container section">
+        <div class="tag__description section cover text__center"
+             style="background-image: url('http://estudiopatagon.com/themes/wordpress/breek/wp-content/uploads/2019/06/8048-1024x725.jpg')">
+            <div class="grid__container grid__small">
+                <h1 class="title white fw__bold large">Personages</h1>
+                <p></p>
+                <p>
+                    Astronomy is a natural science that studies celestial objects and phenomena. It applies mathematics,
+                    physics, and chemistry in an effort to explain the origin of those objects and phenomena and their
+                    evolution
+                </p>
+                <p></p>
+                <span class="icon">
+                    {% include 'components/tag.html.twig' %}
+                </span>
+                <div class="clear"></div>
+            </div>
+            <div class="overlay"></div>
+        </div>
+    </div>
+    <div class="grid__container aos__animate" data-aos="fade-up">
+        <div class="row">
+            <div class="grid__posts">
+                <div class="posts columns__3">
+                    {% for character in characters %}
+                        <article class="bgstyle grid__33 float__right post__characters">
+                            <div class="post__wrapper cover lazy loaded"
+                                 style="background-image: url('http://estudiopatagon.com/themes/wordpress/breek/wp-content/uploads/2019/06/2004612-op.jpg')">
+                                <header>
+                                    <div class="tags absolute tag__character">
+                                        <a href="{{ path('post.show', {slug: character['name']}) }}" class="tag__link">{{ character['name']|firstLetter }}</a>
+                                    </div>
+                                    <h2 class="title gradient__effect">
+                                        <a href="{{ path('post.show', {slug: character['name']}) }}">{{ character['name']}}</a>
+                                    </h2>
+                                </header>
+                                <div class="post__content">
+                                    <p>{{ character['note'] }}</p>
+                                    <div class="clear"></div>
+                                </div>
+                                <footer class="author__meta">
+                                    <div class="meta__info float__right">
+                                        {{ character['episode'] }}
+                                        <i class="ri-movie-line"></i>
+                                    </div>
+                                    <div class="meta__info float__right">
+                                        {{ character['chapter'] }}
+                                        <i class="ri-book-read-line"></i>
+                                    </div>
+                                    <div class="meta__info float__right">
+                                        {{ character['year'] }}
+                                        <i class="ri-calendar-line"></i>
+                                    </div>
+                                    <div class="clear"></div>
+                                </footer>
+                                <div class="overlay"></div>
+                            </div>
+                        </article>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

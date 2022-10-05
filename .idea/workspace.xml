@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1537b258-32bf-4a71-91c9-16d9174f946e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Concern/Scrapp/OnePieceFandomHome.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Concern/Scrapp/Characters/OnePieceCharactersFandom.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/CharactersController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/components/tag.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pages/character/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Concern/Api/Qwant.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Concern/Api/Qwant.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/components/_text.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/components/_text.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/elements/posts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/elements/posts.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Concern/Scrapp/OnepieceFandom.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Concern/Scrapp/OnepieceFandom.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,17 +173,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Project.color": "5f5b0f",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/vincent/Documents/Projects/onepiece_fandom",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Project.color&quot;: &quot;5f5b0f&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/vincent/Documents/Projects/onepiece_fandom&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Color Scheme Font&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/pages/character" />
+      <recent name="$PROJECT_DIR$/templates/pages" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
@@ -201,7 +212,11 @@
       <workItem from="1664656912244" duration="1058000" />
       <workItem from="1664701914397" duration="30191000" />
       <workItem from="1664794622586" duration="23000" />
-      <workItem from="1664826863095" duration="3250000" />
+      <workItem from="1664826863095" duration="3312000" />
+      <workItem from="1664872378239" duration="507000" />
+      <workItem from="1664911481854" duration="2172000" />
+      <workItem from="1664955994909" duration="83000" />
+      <workItem from="1664984350082" duration="9117000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Init project">
       <created>1664272262947</created>
@@ -245,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664828848546</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="feat: add result for home page">
+      <created>1664830125490</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1664830125490</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,7 +280,8 @@
     <MESSAGE value="feat: fix paragraph not found for show post" />
     <MESSAGE value="feat: add popular results" />
     <MESSAGE value="feat: add search component" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add search component" />
+    <MESSAGE value="feat: add result for home page" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add result for home page" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

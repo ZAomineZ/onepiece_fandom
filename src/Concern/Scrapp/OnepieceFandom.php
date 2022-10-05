@@ -11,4 +11,6 @@ final class OnepieceFandom
     const WIKI_ONEPIECE = "https://onepiece.fandom.com/fr/wiki/One_Piece_(Manga)";
 
     CONST SEARCH = 'https://onepiece.fandom.com/fr/wiki/Sp%C3%A9cial:Recherche?scope=internal&navigationSearch=true';
+
+    const CHARACTERS = "https://onepiece.fandom.com/wiki/List_of_Canon_Characters";
 }
